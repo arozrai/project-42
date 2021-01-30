@@ -4,7 +4,10 @@ var drops = []
 function preload(){
    batman=loadAnimation("Walking Frame/walking_1.png","Walking Frame/walking_2.png","Walking Frame/walking_3.png","Walking Frame/walking_4.png","Walking Frame/walking_5.png","Walking Frame/walking_6.png","Walking Frame/walking_7.png","Walking Frame/walking_8.png")
    img = loadImage("Walking Frame/walking_1.png")
-   thunder = loadImage("thunderbolt/2.png")
+   thunder1 = loadImage("thunderbolt/1.png")
+   thunder2 = loadImage("thunderbolt/2.png")
+   thunder3 = loadImage("thunderbolt/3.png")
+   thunder4 = loadImage("thunderbolt/4.png")
 }
 
 function setup(){
@@ -23,7 +26,18 @@ function draw(){
    image(img,200,600)
    if(frameCount%60===0){
       box = createSprite(200,400,50,50)
-      box.addImage(thunder)
+      if(Math.round(random(1,4))===1){
+         box.addImage(thunder1)
+      }
+      if (Math.round(random(1,4))===2){
+         box.addImage(thunder2)
+      }
+      if (Math.round(random(1,4))===3){
+         box.addImage(thunder3)
+      }
+      if (Math.round(random(1,4))===4){
+         box.addImage(thunder4)
+      }
       box.lifetime=10
    }
 
