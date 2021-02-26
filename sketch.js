@@ -25,17 +25,15 @@ function draw(){
    child.display()
    image(img,200,600)
    if(frameCount%60===0){
-      box = createSprite(200,400,50,50)
+      box = createSprite(200,200,50,50)
+      box.scale = 0.6
       if(Math.round(random(1,4))===1){
          box.addImage(thunder1)
-      }
-      if (Math.round(random(1,4))===2){
+      }else if (Math.round(random(1,4))===2){
          box.addImage(thunder2)
-      }
-      if (Math.round(random(1,4))===3){
+      }else if (Math.round(random(1,4))===3){
          box.addImage(thunder3)
-      }
-      if (Math.round(random(1,4))===4){
+      }else {
          box.addImage(thunder4)
       }
       box.lifetime=10
